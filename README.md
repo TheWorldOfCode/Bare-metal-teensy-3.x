@@ -6,7 +6,7 @@ The folder teensy3 contains a part for the Teensyduino, it is the bare form ther
 The folder tools contains the teensy loader from [www.pjrc.com/teensy]. On linux is it a good idea to copy the 49-teensy.rules to /etc/udev/rules.d/
 
 
-In the folder project you find the make file, which compiles your program. You should change the variable LIBDIR to your library path (The folder teensy3 or others) and TARGET. 
+In the folder project you find the make file, which compiles your program. You should change the variable LIBDIR to your library path (The folder teensy3 or others), TOOLS and TARGET. 
 
 The make file has som function you can call. 
 
