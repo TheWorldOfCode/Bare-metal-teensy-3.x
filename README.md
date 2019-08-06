@@ -21,6 +21,7 @@ Uninstall the compiler (works only on linux systems)
 
 `make setup` 
 Create a src and build folder (build folder not used right now)
+
 `make fuse`
 flash the hex files to the teensy with teensy loader
 
