@@ -8,7 +8,7 @@ In the folder project you find the make file, which compiles your program. You s
 
 The make file has som function you can call. 
 
-'make' 
+´make´ 
 Compile the project to a hex file
 
 'make install' 
