@@ -27,3 +27,6 @@ flash the hex files to the teensy with teensy loader
 
 `make clean`
 Remove the files with the externsions *.d *.o *.elf og *.hex
+
+
+When usering this download what you are missing. Start your project inside the folder project. Change the variable LIBDIR, TARGET, TOOLS. Remove the linker files you doesn't need. 
