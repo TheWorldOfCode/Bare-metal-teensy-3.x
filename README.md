@@ -8,14 +8,14 @@ In the folder project you find the make file, which compiles your program. You s
 
 The make file has som function you can call. 
 
-> make 
+'make' 
 Compile the project to a hex file
 
-> make install 
+'make install' 
 Install the compiler gcc-arm-nano-eabi (works only on linux systems)
 
-> make fuse
+'make fuse'
 flash the hex files to the teensy with teensy loader
 
-> make clean
+'make clean'
 Remove the files with the externsions *.d *.o *.elf og *.hex
