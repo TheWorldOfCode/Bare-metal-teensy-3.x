@@ -3,7 +3,7 @@ This allow you to program to your teensy 3.x without the use of arduino studio. 
 
 The folder teensy3 contains a part for the Teensyduino, it is the bare form there core library. But there are som små changes. The linker files are moved to the folder project and the mk20dx128.c file is also moved to the folder project and renamed to startup.c because it contains the interrupt vector and reset function for all teensy 3. 
 
-The folder tools contains the teensy loader from [www.pjrc.com/teensy]. On linux is it a good idea to copy the 49-teensy.rules to /etc/udev/rules.d/
+The folder tools contains the teensy loader from [www.pjrc.com/teensy]. On linux is it a good idea to copy the 49-teensy.rules to /etc/udev/rules.d/ because then the teensy loader don't need sudo access
 
 
 In the folder project you find the make file, which compiles your program. You should change the variable LIBDIR to your library path (The folder teensy3 or others), TOOLS and TARGET. 
