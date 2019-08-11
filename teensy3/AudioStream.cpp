@@ -29,7 +29,7 @@
  */
 
 
-#include <Arduino.h>
+#include "Arduino.h"
 #include "AudioStream.h"
 
 #if defined(__MKL26Z64__)
@@ -341,4 +341,3 @@ void software_isr(void) // AudioStream::update_all()
 	if (totalcycles > AudioStream::cpu_cycles_total_max)
 		AudioStream::cpu_cycles_total_max = totalcycles;
 }
-

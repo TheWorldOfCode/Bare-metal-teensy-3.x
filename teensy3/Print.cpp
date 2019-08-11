@@ -34,7 +34,7 @@
 // developed for Teensyduino have made their way back into
 // Arduino's code base.  :-)
 
-#include <Arduino.h>
+#include "Arduino.h"
 
 
 size_t Print::write(const uint8_t *buffer, size_t size)
@@ -287,7 +287,7 @@ size_t Print::printNumber(unsigned long n, uint8_t base, uint8_t sign)
 
 #endif
 
-size_t Print::printFloat(double number, uint8_t digits) 
+size_t Print::printFloat(double number, uint8_t digits)
 {
 	uint8_t sign=0;
 	size_t count=0;
@@ -296,7 +296,7 @@ size_t Print::printFloat(double number, uint8_t digits)
     	if (isinf(number)) return print("inf");
     	if (number > 4294967040.0f) return print("ovf");  // constant determined empirically
     	if (number <-4294967040.0f) return print("ovf");  // constant determined empirically
-	
+
 	// Handle negative numbers
 	if (number < 0.0) {
 		sign = 1;
@@ -327,11 +327,9 @@ size_t Print::printFloat(double number, uint8_t digits)
 			remainder *= 10.0;
 			n = (uint8_t)(remainder);
 			buf[count++] = '0' + n;
-			remainder -= n; 
+			remainder -= n;
 		}
 		count += write(buf, count);
 	}
 	return count;
 }
-
-

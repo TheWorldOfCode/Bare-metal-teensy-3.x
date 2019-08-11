@@ -28,7 +28,7 @@
  * SOFTWARE.
  */
 
-#include <Arduino.h>
+#include "Arduino.h"
 #include "EventResponder.h"
 
 void yield(void) __attribute__ ((weak));

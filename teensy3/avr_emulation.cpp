@@ -29,7 +29,7 @@
  */
 
 
-#include <Arduino.h>
+#include "Arduino.h"
 #include "SPIFIFO.h"
 
 uint8_t SPCRemulation::pinout = 0;
@@ -50,5 +50,3 @@ uint8_t SPIFIFOclass::pcs = 0;
 volatile uint8_t * SPIFIFOclass::reg = 0;
 
 #endif
-
-

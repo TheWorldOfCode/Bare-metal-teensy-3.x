@@ -31,7 +31,7 @@
  *     https://forum.pjrc.com/threads/44723-Arduino-Events
  */
 
-#include <Arduino.h>
+#include "Arduino.h"
 #include "EventResponder.h"
 
 EventResponder * EventResponder::firstYield = nullptr;
@@ -228,7 +228,7 @@ void MillisTimer::addToActiveList() // only called by runFromTimer()
 		_prev = nullptr;
 		listActive->_prev = this;
 		// Decrement the next items wait time be our wait time as to properly handle waits for all other items...
-		listActive->_ms -= _ms;	
+		listActive->_ms -= _ms;
 		listActive = this;
 	} else {
 		// add this timer somewhere after the first already on the list
@@ -340,5 +340,3 @@ void systick_isr(void)
 	systick_millis_count++;
 	MillisTimer::runFromTimer();
 }
-
-

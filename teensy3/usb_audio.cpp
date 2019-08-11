@@ -28,7 +28,7 @@
  * SOFTWARE.
  */
 
-#include <Arduino.h>
+#include "Arduino.h"
 #include "usb_dev.h"
 
 #ifdef AUDIO_INTERFACE // defined by usb_dev.h -> usb_desc.h
@@ -75,7 +75,7 @@ void AudioInputUSB::begin(void)
 
 static void copy_to_buffers(const uint32_t *src, int16_t *left, int16_t *right, unsigned int len)
 {
-	uint32_t *target = (uint32_t*) src + len; 
+	uint32_t *target = (uint32_t*) src + len;
 	while ((src < target) && (((uintptr_t) left & 0x02) != 0)) {
 		uint32_t n = *src++;
 		*left++ = n & 0xFFFF;
@@ -421,7 +421,7 @@ int usb_audio_get_feature(void *stp, uint8_t *data, uint32_t *datalen)
 	return 0;
 }
 
-int usb_audio_set_feature(void *stp, uint8_t *buf) 
+int usb_audio_set_feature(void *stp, uint8_t *buf)
 {
 	struct setup_struct setup = *((struct setup_struct *)stp);
 	if (setup.bmRequestType==0x21) { // should check bRequest, bChannel and UnitID
