@@ -44,11 +44,11 @@ CPUARCH = cortex-m4
 #************************************************************************
 
 # CFLAGS = compiler options for C and C++
-CFLAGS = -Wall -g -mcpu=$(CPUARCH) -mthumb -MMD $(OPTIONS) 
+CPPFLAGS = -Wall -g -mcpu=$(CPUARCH) -mthumb -MMD $(OPTIONS) 
 # search path for headers
-CFLAGS += -I. -I$(LIBDIR)
+CPPFLAGS += -I. -I$(LIBDIR)
 # Optimization 
-CFLAGS += -Os -ffunction-sections -fdata-sections -fsingle-precision-constant
+CPPFLAGS += -Os -ffunction-sections -fdata-sections -fsingle-precision-constant
 # compiler options for C++ only
 CXXFLAGS = -std=gnu++14 -felide-constructors -fno-exceptions -fno-rtti
 
@@ -109,8 +109,7 @@ endif
 
 endif
 
-endif
-	
+endif	
 remove:
 ifeq ($(OS), Windows_NT)
 	@echo 'uninstall gcc-arm-none eabi manual'
